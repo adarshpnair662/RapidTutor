@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "222624874991",
+    "firebase_url": "https://login-1106d.firebaseio.com",
+    "project_id": "login-1106d",
+    "storage_bucket": "login-1106d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222624874991:android:21b8202307987148a8761a",
+        "android_client_info": {
+          "package_name": "com.adarshcreation.rapidtutor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222624874991-78qk0gpk6k4et6ppgf6e70obchqtnd13.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.adarshcreation.rapidtutor",
+            "certificate_hash": "9d1f37ab708419d7acd78ca408698f38a21a1a5a"
+          }
+        },
+        {
+          "client_id": "222624874991-6unc41cahbkm8u7nthc29pp9fdb21sqi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUheCpWjP8wxmricWJKxsfhZc73ngjBus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "222624874991-6unc41cahbkm8u7nthc29pp9fdb21sqi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

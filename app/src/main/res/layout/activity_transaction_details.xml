@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="345dp"
+    android:layout_height="200dp"
+    android:layout_gravity="center"
+    tools:context=".TransactionDetails">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/Linearlayout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transaction ID: "
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/transaction_id_text">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10146462661654"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/transaction_id_text"
+            android:id="@+id/transaction_id">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To: "
+            android:layout_below="@+id/transaction_id_text"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/transaction_to_text">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ajil@gmail.com "
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/transaction_id_text"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/transaction_to_text"
+            android:id="@+id/transaction_to">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From: "
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/transaction_to_text"
+            android:layout_marginRight="10dp"
+            android:id="@+id/transaction_from_text">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fds@gmail.com"
+            android:layout_below="@+id/transaction_to_text"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/transaction_from_text"
+            android:id="@+id/transaction_from">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount: "
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/transaction_from_text"
+            android:layout_marginRight="10dp"
+            android:id="@+id/transaction_amount_text">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount: "
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/transaction_amount_text"
+            android:layout_below="@+id/transaction_from_text"
+            android:layout_marginRight="10dp"
+            android:id="@+id/transaction_amount">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On: "
+            android:layout_below="@+id/transaction_amount_text"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/transaction_time_text">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:layout_below="@+id/transaction_amount_text"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/transaction_time_text"
+            android:id="@+id/transaction_time">
+        </TextView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

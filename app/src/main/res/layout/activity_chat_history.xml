@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatHistory">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:background="@color/colorPrimaryDark">
+
+        <ProgressBar
+            android:id="@+id/progressBar_cyclic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:visibility="visible"
+            android:minWidth="50dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/message_icon"
+            android:padding="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/message">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Messages"
+            android:layout_toRightOf="@id/message_icon"
+            android:id="@+id/message_text"
+            style="@style/HeadingText"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"></TextView>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/favorite_border"
+            android:background="@drawable/black_rounded_light_box"
+            android:id="@+id/favourite"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/message_text"
+            android:layout_height="match_parent"
+            android:paddingTop="50dp"
+            android:orientation="vertical"
+            android:background="@drawable/black_box_round">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/no_chat"
+                android:visibility="gone"
+                android:text="No Chat"></TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chat_history_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

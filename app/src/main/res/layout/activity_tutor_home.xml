@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TutorHome">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linear_tutor_1"
+        style="@style/Linearlayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/status_bar"
+            android:visibility="invisible">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Online"
+                android:id="@+id/status_text"
+                android:layout_toLeftOf="@+id/status_icon"
+                style="@style/NormalText"></TextView>
+
+            <ImageView
+                android:layout_width="10dp"
+                android:id="@+id/status_icon"
+                android:layout_height="10dp"
+                android:layout_margin="5dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/green_circle"></ImageView>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TittleTheme"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tutor_app_name"
+            android:layout_gravity="center_vertical"
+            android:text="@string/app_name"></TextView>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/online_offline_switch"
+            android:layout_below="@+id/status_bar"
+            android:thumbTint="@color/colorAccent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/black_rounded_light_box"></Switch>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today's"
+            android:layout_marginTop="20dp"
+            android:id="@+id/today_text"
+            android:layout_below="@+id/online_offline_switch"
+            style="@style/TittleTheme"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time:"
+            android:layout_marginTop="20dp"
+            android:textSize="24sp"
+            android:fontFamily="@font/roboto"
+            android:layout_toLeftOf="@+id/tutor_online_time"
+            android:layout_below="@id/online_offline_switch"
+            android:id="@+id/time_text"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7h 22min"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentRight="true"
+            android:textSize="24sp"
+            android:fontFamily="@font/roboto"
+            android:layout_below="@id/online_offline_switch"
+            android:id="@+id/tutor_online_time"></TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/assessment"
+            android:id="@+id/order_num_icon"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/today_text"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/today_text"
+            android:layout_toRightOf="@+id/order_num_icon"
+            android:textSize="24sp"
+            android:fontFamily="@font/roboto"
+            android:id="@+id/tutor_num_order"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount: ₹"
+            android:layout_below="@id/today_text"
+            android:layout_toLeftOf="@+id/tutor_amount"
+            android:textSize="24sp"
+            android:fontFamily="@font/roboto"
+            android:id="@+id/tutor_amount_text"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/today_text"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/roboto"
+            android:id="@+id/tutor_amount"></TextView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transactions"
+            android:layout_marginTop="20dp"
+            android:id="@+id/Transaction_check"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/order_num_icon"
+            android:background="@drawable/vilot_rounded_bg"></Button>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Transaction_check"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:id="@+id/earning_analytics"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/black_box"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Earning"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/today_text"
+                android:textSize="24sp"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/roboto_bold"
+                android:id="@+id/earning_graph"></TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:background="@drawable/graph">
+            </ImageView>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TittleTheme"
+            android:id="@+id/earning_history_text"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/earning_analytics"
+            android:fontFamily="@font/roboto"
+            android:layout_marginBottom="0dp"
+            android:text="Other"></TextView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_below="@id/earning_history_text"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booking"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:id="@+id/tutor_booking_notify"
+                style="@style/NormalText"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tutor_message_notify"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/tutor_booking_notify"
+                android:text="Merit"></TextView>
+
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/vilot_rounded_bg"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tutor_booking_value"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100%"
+                android:gravity="center"
+                android:layout_below="@id/tutor_booking_value"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tutor_message_value"></TextView>
+
+        </RelativeLayout>
+       </RelativeLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linear_2"
+        android:padding="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:id="@+id/linear_tutor_2"
+            android:background="@drawable/vilot_rounded_bg">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/menu_home"
+                android:background="@drawable/home"></ImageButton>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/menu_chat"
+                android:background="@drawable/message"></ImageButton>
+
+            <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/menu_booking"
+                android:background="@drawable/booking_tag"></ImageButton>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/menu_payment"
+                android:background="@drawable/payment_icon"></ImageButton>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/menu_profile"
+                android:background="@drawable/account_circle"></ImageButton>
+
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account is Blocked"
+        android:visibility="gone"
+        android:id="@+id/account_block_text"
+        android:layout_centerInParent="true"
+        style="@style/HeadingText"></TextView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        app:lottie_rawRes="@raw/fluidloading"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true" />
+
+
+</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

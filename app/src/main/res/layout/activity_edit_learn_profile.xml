@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditLearnProfile">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:textSize="16sp"
+            android:layout_marginRight="16dp"
+            android:textAllCaps="false"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="right"
+            android:id="@+id/learn_done"
+            android:background="@drawable/vilot_rounded_bg"
+            android:fontFamily="@font/roboto_bold"></Button>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/unnamed"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                app:civ_shadow="true"
+                app:civ_border_width="0dp"
+                app:civ_shadow_radius="1"
+                android:id="@+id/learn_profile_pic_upload"
+                app:civ_shadow_color="@color/colorAccent"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                style="@style/EditText"
+                android:maxLines="1"
+                android:maxLength="50"
+                android:layout_marginTop="10dp"
+                android:id="@+id/learn_name"
+                android:background="@drawable/black_rounded_light_box"
+                android:layout_height="wrap_content"
+                android:hint="Name"></EditText>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:paddingTop="80dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/rectangle_top_curve"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                style="@style/EditText"
+                android:maxLines="1"
+                android:maxLength="50"
+                android:id="@+id/learn_communication"
+                android:layout_height="wrap_content"
+                android:hint="Communication (eg: hindi malayalam)"></EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="About me"
+                android:lines="10"
+                android:maxLines="10"
+                android:maxLength="250"
+                android:id="@+id/learn_about_me"
+                android:gravity="start"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/black_drak_box"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey"></EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                style="@style/EditText"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:maxLength="50"
+                android:layout_height="wrap_content"
+                android:id="@+id/learn_currently"
+                android:hint="Currently eg: Student"></EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                style="@style/EditText"
+                android:layout_marginTop="10dp"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:maxLength="10"
+                android:id="@+id/learn_mobile_num"
+                android:layout_height="wrap_content"
+                android:hint="Mobile No."></EditText>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

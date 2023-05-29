@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    tools:context=".Booking">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/Linearlayout"
+        android:visibility="visible"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/HeadingText"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/pay_reward_text"
+            android:text="Booking"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hourly Rate: "
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/pay_reward_text"
+            android:id="@+id/pay_hourly_rate">
+        </TextView>
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            style="@style/EditText"
+            android:inputType="number"
+            android:gravity="center"
+            android:maxLength="3"
+            android:hint="min ₹20"
+            android:layout_toRightOf="@+id/pay_hourly_rate"
+            android:layout_below="@+id/pay_reward_text"
+            android:id="@+id/pay_hourly_rate_num"
+            android:background="@drawable/black_rounded_light_box"></EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comment: "
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/pay_hourly_rate_num"
+            android:id="@+id/pay_comment_text">
+        </TextView>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type here"
+            style="@style/EditText"
+            android:lines="5"
+            android:maxLength="50"
+            android:maxLines="5"
+            android:gravity="start"
+            android:padding="10dp"
+            android:id="@+id/pay_comment_box"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/pay_comment_text"
+            android:background="@drawable/black_box"></EditText>
+
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="DATE"
+           android:background="@drawable/black_box"
+           android:layout_below="@+id/pay_comment_box"
+           android:id="@+id/date_picker"></Button>
+
+         <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TIME"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/pay_comment_box"
+            android:background="@drawable/black_box"
+            android:id="@+id/time_picker"></Button>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/date_picker">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Send"
+                android:id="@+id/send_reward"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_bold"
+                android:textAllCaps="false"
+                android:background="@color/colorPrimaryDark"></Button>
+
+            <View
+                android:layout_width="1dp"
+                android:background="@color/grey"
+                android:layout_height="match_parent"></View>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_bold"
+                android:textAllCaps="false"
+                android:id="@+id/cancel_reward_btn"
+                android:layout_alignParentRight="true"
+                android:background="@color/colorPrimaryDark"></Button>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

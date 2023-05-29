@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/categories_stroke"
+        android:padding="10dp"
+        android:id="@+id/chat_history_chat_card"
+        android:layout_margin="10dp">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/orangle_circle"
+            app:civ_border_width="0dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/chat_history_profile_pic"
+            app:civ_shadow_radius="1"
+            app:civ_shadow_color="@color/colorAccent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/chat_history_online"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="12dp"
+            android:visibility="invisible"
+            android:layout_toRightOf="@+id/chat_history_profile_pic"
+            android:background="@drawable/categories_stroke"
+            android:text="Online"></TextView>
+
+        <ImageButton
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_toLeftOf="@+id/chat_history_teach_rating"
+            android:background="@drawable/favorite_border"
+            android:layout_marginRight="10dp"
+            android:visibility="visible"
+            android:id="@+id/chat_history_fav_icon"></ImageButton>
+
+
+        <ImageButton
+            android:id="@+id/chat_history_filled_fav_icon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/chat_history_teach_rating"
+            android:background="@drawable/fill_favorite"
+            android:visibility="invisible"></ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/chat_history_name"></TextView>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:layout_alignParentRight="true"
+            style="?android:attr/ratingBarStyleSmall"
+            android:stepSize="0.5"
+            android:id="@+id/chat_history_teach_rating"
+            android:rating="4.5"></RatingBar>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/chat_read"
+            android:visibility="invisible"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/chat_history_teach_rating"
+            android:src="@drawable/blue_circle"></ImageView>
+
+    </RelativeLayout>
+</LinearLayout>

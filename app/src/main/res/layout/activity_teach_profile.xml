@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TeachProfile">
+
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="50dp"
+        android:background="@color/colorPrimaryDark">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                app:lottie_rawRes="@raw/fluidloading"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_weight="2">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_box"
+                android:layout_weight="1"
+                app:civ_border_width="0dp"
+                app:civ_shadow="true"
+                android:id="@+id/teach_profile_pic"
+                app:civ_shadow_radius="1"
+                app:civ_shadow_color="@color/colorAccent"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_marginLeft="10dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    style="@style/HeadingText"
+                    android:id="@+id/teach_name">
+                </TextView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/assessment"
+                    android:layout_below="@+id/teach_name"
+                    android:id="@+id/order_icon"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/order_icon"
+                    android:layout_below="@+id/teach_name"
+                    android:id="@+id/teach_order_no"
+                    android:fontFamily="@font/roboto">
+                </TextView>
+
+              <RatingBar
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:numStars="5"
+                  android:layout_marginTop="5dp"
+                  android:layout_toEndOf="@+id/teach_order_no"
+                  android:layout_below="@+id/teach_name"
+                  style="?android:attr/ratingBarStyleSmall"
+                  android:stepSize="0.5"
+                  android:id="@+id/teach_rating"
+                  android:rating="4.5"></RatingBar>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/send"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/teach_message_icon">
+                </ImageButton>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_pencil"
+                    android:id="@+id/Profile_Edit_icon"
+                    android:visibility="invisible"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"></ImageButton>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingTop="60dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:layout_weight="15"
+            android:background="@drawable/rectangle_top_curve">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/teach_booking"
+                android:background="@drawable/booking_tag"
+                android:layout_gravity="right"></ImageButton>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SubHeading"
+                android:text="Communication"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ParagraphText"
+                android:maxLines="1"
+                android:id="@+id/teach_communication"
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SubHeading"
+                android:text="About me"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ParagraphText"
+                android:id="@+id/teach_about_me"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SubHeading"
+                android:id="@+id/review_text_teach"
+                android:text="Review"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/linear_teach_profile">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/review_recycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

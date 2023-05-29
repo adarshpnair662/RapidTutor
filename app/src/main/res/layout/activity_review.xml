@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="345dp"
+    android:layout_gravity="center"
+    android:layout_height="345dp"
+    tools:context=".PayReward">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/Linearlayout"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/HeadingText"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/review_text"
+            android:text="Review"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help us to improve"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/review_text"
+            android:id="@+id/review_intro">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_below="@+id/review_intro"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/review_tutor_name"
+            style="@style/HeadingText"
+            android:text="Adarsh P Nair"></TextView>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:layout_below="@id/review_tutor_name"
+            style="?android:attr/ratingBarStyle"
+            android:stepSize="0.5"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/review_star"
+            android:rating="0"></RatingBar>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="3"
+            android:id="@+id/review_content"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/review_star"
+            android:maxLength="30"
+            android:background="@drawable/black_box"
+            android:maxLines="3"></EditText>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Ok"
+                android:id="@+id/send_review"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_bold"
+                android:textAllCaps="false"
+                android:background="@color/colorPrimaryDark"></Button>
+
+            <View
+                android:layout_width="1dp"
+                android:background="@color/grey"
+                android:layout_height="match_parent"></View>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_bold"
+                android:textAllCaps="false"
+                android:id="@+id/cancel_review"
+                android:layout_alignParentRight="true"
+                android:background="@color/colorPrimaryDark"></Button>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

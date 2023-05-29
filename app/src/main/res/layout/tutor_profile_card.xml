@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@+id/cardview_id"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    cardview:cardBackgroundColor="@color/colorPrimaryDark"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    app:ignore="NamespaceTypo">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:background="@drawable/black_box">
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/unnamed"
+            android:layout_weight="1"
+            app:civ_border_width="0dp"
+            app:civ_shadow="true"
+            android:id="@+id/search_profile_pic"
+            app:civ_shadow_radius="1"
+            app:civ_shadow_color="@color/colorAccent"/>
+
+        <ImageView
+            android:layout_width="5dp"
+            android:id="@+id/search_online"
+            android:layout_height="5dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/green_circle"
+            android:layout_alignParentRight="true"></ImageView>
+
+        <ImageButton
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/favorite_border"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/search_profile_pic"
+            android:id="@+id/fav_icon"></ImageButton>
+
+        <ImageButton
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:visibility="invisible"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/fill_favorite"
+            android:id="@+id/filled_fav_icon"></ImageButton>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_above="@+id/search_rating_icon"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/search_price"></TextView>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/assessment"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/search_order_icon"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/search_order_icon"
+            android:textSize="14sp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/search_order_no"
+            android:fontFamily="@font/roboto">
+        </TextView>
+
+
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/star"
+            android:layout_toLeftOf="@+id/search_rating_text"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/search_rating_icon"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:id="@+id/search_rating_text"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/roboto">
+        </TextView>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

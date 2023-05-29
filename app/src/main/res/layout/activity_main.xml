@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="7"
+          android:paddingLeft="50dp"
+          android:paddingTop="80dp"
+          android:paddingRight="50dp"
+          android:paddingBottom="10dp"
+          android:background="@drawable/mainpagebgm">
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/app_name"
+              android:layout_centerHorizontal="true"
+              android:gravity="center"
+              android:fontFamily="@font/roboto_bold"
+              android:textSize="26sp"
+              android:layout_marginBottom="20dp"
+              android:text="Rapid Tutor">
+          </TextView>
+          <ImageView
+              android:layout_width="180dp"
+              android:layout_height="180dp"
+              android:layout_centerHorizontal="true"
+              android:layout_below="@+id/app_name"
+              android:background="@drawable/white_box"
+              android:src="@drawable/app_icon">
+          </ImageView>
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentBottom="true"
+              android:text="Join us"
+              android:fontFamily="@font/roboto_bold"
+              android:textSize="26dp"
+              android:textColor="@color/colorPrimary">
+          </TextView>
+      </RelativeLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="2"
+       android:paddingLeft="50dp"
+       android:orientation="vertical">
+       <TextView
+           android:layout_width="match_parent"
+           android:textColor="@color/colorPrimary"
+           android:layout_height="wrap_content"
+           android:textSize="26dp"
+           android:fontFamily="@font/roboto_thin"
+           android:text="Sign up/Sign in"
+           android:layout_marginBottom="10dp">
+       </TextView>
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:padding="5dp"
+           android:textSize="14dp"
+           android:id="@+id/get_in_btn"
+           android:fontFamily="@font/roboto_bold"
+           android:background="@drawable/vilot_box"
+           android:textColor="@color/colorPrimaryDark"
+           android:text="GET IN"
+           ></Button>
+   </LinearLayout>
+
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

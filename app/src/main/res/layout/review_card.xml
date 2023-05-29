@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardview_review"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="10dp"
+    cardview:cardElevation="10dp"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    cardview:cardBackgroundColor="@color/colorPrimaryDark"
+    cardview:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:id="@+id/review_card_layout"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/black_drak_box">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ParagraphText"
+            android:maxLines="1"
+            android:id="@+id/reviewer"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginBottom="5dp"
+            android:text="Sane Abharam"></TextView>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:layout_alignParentRight="true"
+            style="?android:attr/ratingBarStyleSmall"
+            android:stepSize="0.5"
+            android:id="@+id/review_rating"
+            android:rating="4.5"></RatingBar>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ParagraphText"
+            android:layout_below="@+id/reviewer"
+            android:id="@+id/reviewer_text"
+            android:maxLines="2"
+            android:text="Nice Guy, He cleared all my doubt"></TextView>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

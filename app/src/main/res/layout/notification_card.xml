@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/notification_card">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/black_box"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajil Jose"
+            android:id="@+id/learner_name"
+            style="@style/NormalText"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/booking_time"
+            android:textColor="@color/grey"
+            android:layout_below="@+id/learner_name"
+            android:text="20/11/2020 9:30pm"></TextView>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:visibility="invisible"
+            android:id="@+id/accept_booking"
+            android:background="@drawable/check_icon"></ImageButton>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="invisible"
+            android:id="@+id/cancel_booking_icon"
+            android:background="@drawable/delete_forever_icon"></ImageButton>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            android:layout_alignParentRight="true"
+            android:id="@+id/today_cancel_icon"
+            android:background="@drawable/cancel_icon"></ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rejected"
+            android:id="@+id/booking_reject"
+            android:visibility="gone"
+            android:textStyle="italic"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"></TextView>
+    </RelativeLayout>
+
+</LinearLayout>

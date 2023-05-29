@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentHistory">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/Linearlayout"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/payment_sucess"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            app:lottie_rawRes="@raw/correct"
+            android:visibility="gone"
+            app:lottie_loop="false"
+            android:layout_below="@+id/payment_pay_btn"
+            app:lottie_autoPlay="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/payment_icon"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"></ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/HeadingText"
+                android:textSize="24sp"
+                android:layout_gravity="center_vertical"
+                android:text="Payment"></TextView>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹ 0"
+            android:layout_gravity="center_horizontal"
+            android:padding="16dp"
+            android:id="@+id/payment_amount"
+            android:background="@drawable/black_rounded_light_box"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginBottom="20dp"></TextView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:id="@+id/payment_card_make"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/black_box">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/payment_to_text"
+                android:layout_marginBottom="10dp"
+                style="@style/NormalText"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/payment_to_text"
+                android:id="@+id/payment_to"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/roboto_thin"
+                android:text="adrsh@gmail.com"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/black_drak_box"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Type"
+                android:textSize="16sp"
+                android:layout_below="@+id/payment_to"
+                android:id="@+id/payment_type_text"
+                style="@style/NormalText"></TextView>
+
+            <Spinner
+                android:id="@+id/payment_type"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/NormalText"
+                android:padding="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@+id/payment_type_text"
+                android:background="@drawable/black_drak_box"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pay"
+                android:id="@+id/payment_pay_btn"
+                android:layout_below="@+id/payment_type"
+                android:layout_alignParentRight="true"
+                android:textAllCaps="false"
+                android:background="@drawable/vilot_rounded_bg"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_bold"></Button>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:lottie_rawRes="@raw/paymentcard"
+                app:lottie_loop="true"
+                android:layout_below="@+id/payment_pay_btn"
+                app:lottie_autoPlay="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TittleTheme"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="Payment History"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_payment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
